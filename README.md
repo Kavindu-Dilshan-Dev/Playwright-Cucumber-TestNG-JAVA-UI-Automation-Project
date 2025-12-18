@@ -1,4 +1,4 @@
-# Playwright Java Cucumber TestNG\ Project
+# Playwright Java Cucumber TestNG Project
 
 ## Description
 A test automation project using Playwright (Java) for browser automation, Cucumber for BDD, and TestNG as the test runner. Reports are generated using `net.masterthought.cucumber`.
