@@ -34,7 +34,7 @@ jobs:
         run: mvn install -DskipTests
 
       - name: Install Playwright Browsers
-        run: mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install"
+        run: npx playwright install --with-deps
 
       - name: Run Tests
         run: mvn test
