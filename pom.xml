@@ -51,6 +51,11 @@
         <!--Test NG-->
 
         <!-- cucumber reporting-->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>7.27.2</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/net.masterthought/maven-cucumber-reporting -->
         <dependency>
             <groupId>net.masterthought</groupId>

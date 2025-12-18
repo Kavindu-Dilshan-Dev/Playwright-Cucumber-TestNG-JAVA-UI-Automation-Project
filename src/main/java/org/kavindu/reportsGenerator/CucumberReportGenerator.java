@@ -8,8 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class CucumberReportGenerator {
-
-
+    // This is generating report
     public static void main(String[] args) {
         // Auto-generated method stub
         File reportOutputDirectory = new File("target/cucumber-reports");
