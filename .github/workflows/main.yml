@@ -33,8 +33,19 @@ jobs:
       - name: Install Maven dependencies
         run: mvn install -DskipTests
 
+      - name: Install Playwright Browsers
+        run: mvn exec:java -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install"
+
       - name: Run Tests
         run: mvn test
+
+      - name: Show test failure reports
+        if: failure()
+        run: |
+          echo "====== Surefire Reports ======"
+          ls target/surefire-reports || true
+          cat target/surefire-reports/*.txt || true
+
 
       - name: Generate cucumber HTML report
         run: mvn exec:java -Dexec.mainClass="reportsGenerator.CucumberReportGenerator"
