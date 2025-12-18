@@ -44,6 +44,12 @@ jobs:
           mkdir -p docs
           cp -r target/cucumber-reports/* docs/
 
+      - name: Rename report to index.html
+        run: |
+          if [ -f docs/cucumber.html ]; then
+            mv docs/cucumber.html docs/index.html
+          fi
+
       - name: Commit HTML report to repo
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -52,4 +58,4 @@ jobs:
           git config --global user.email 'github-actions@github.com'
           git add docs/
           git commit -m "Update Cucumber HTML Report [skip ci]" || echo "No changes to commit"
-          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:master
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:main
