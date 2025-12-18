@@ -1,0 +1,9 @@
+<!-- File: `testng.xml` -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CucumberSuite">
+    <test name="CucumberTests">
+        <classes>
+            <class name="runners.TestRunner"/>
+        </classes>
+    </test>
+</suite>
